@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Gothic+Condensed+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Special+Gothic+Condensed+One&display=swap');
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Special Gothic Condensed One', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
     
 }
