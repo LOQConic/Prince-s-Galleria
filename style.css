@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Gothic+Condensed+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Special+Gothic+Condensed+One&display=swap');
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
-    
 }
 
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,58 +21,45 @@
 .container .heading {
     width: 50%;
     padding-bottom: 50px;
-
 }
 
-
-.container .heading h3{
+.container .heading h3 {
     font-size: 3em;
     font-weight: bolder;
     padding-bottom: 10px;
     border-bottom: 3px solid #ffffff;
-
 }
 
-
-.container .heading h3 span{
-
+.container .heading h3 span {
     font-weight: 100;
-    
 }
 
-
-
-.container .box{
+.container .box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
-.container .box .dream{
+.container .box .dream {
     display: flex;
     flex-direction: column;
     width: 32.5%;
 }
 
-.container .box .dream img{
-
+.container .box .dream img {
     width: 100%;
     padding-bottom: 15px;
     border-radius: 5px;
 }
 
-
-.container .btn{
+.container .btn {
     margin: 40px 0 70px 0;
     background-color: #222;
     padding: 15px 40px;
     border-radius: 5px;
 }
 
-
-.container .btn a{
-
+.container .btn a {
     color: #fff;
     font-size: 1.2em;
     text-decoration: none;
@@ -83,59 +67,336 @@
     letter-spacing: 3px;
 }
 
-
 .dream img {
     transition: transform 1s ease; /* zoom in & out smoothly */
-  }
-  
-  .dream img:hover {
+}
+
+.dream img:hover {
     transform: scale(1.05); /* zoom slightly */
-  }
+}
 
-
-  body {
+body {
     background-color: #000000; /* Deep navy/space blue */
     min-height: 100vh;
     margin: 0;
-  }
-  
-  
-  
-  
-  
-  
-
-@media only screen and (max-width: 769px){
-    .container .box{
-        flex-direction: column;
-    
-    }
-
-    .container .box .dream{
-
-        width: 100%;
-    }
-    
 }
 
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: background-color 0.3s ease;
+}
 
-@media only screen and (max-width: 643px){
+#topBtn:hover {
+    background-color: #444;
+}
 
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+.dream img {
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.dream img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dream img:hover {
+    transform: scale(1.05);
+}
+
+.dream img.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Styling the buttons */
+.container .btn {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.container .btn a {
+    background-color: #222;
+    padding: 15px 40px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.heading {
+    position: relative;
+}
+
+/* Hover text styling */
+.hover-text {
+    position: absolute;
+    top: 100%; /* Position it just below the line */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+    font-size: 1.2em;
+    letter-spacing: 3px; /* Adds spacing between the letters */
+    color: #fff;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
+    visibility: hidden; /* Hidden by default */
+    font-family: 'Bebas Neue', sans-serif; /* Same font as the 'Galleria' title */
+}
+
+/* Show text when hovering over the heading */
+.heading:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* NAV BAR */
+/* Update the navigation bar dropdown to include Gallery */
+.nav-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3000;
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 1s ease;
+}
+
+.menu-icon .bar {
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #fffefe;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#profilePic {
+    width: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* CONTACT INFO */
+#contactInfo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 0.9em;
+    display: none;
+}
+
+#contactInfo a {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 769px) {
+    .container .box {
+        flex-direction: column;
+    }
+
+    .container .box .dream {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 643px) {
     .container .heading {
         width: 100%;
-
-    
     }
-    
-    
-    .container .heading h3{
+
+    .container .heading h3 {
         font-size: 1em;
-
-    
     }
-    
-
 }
 
+/* Fade in animation */
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
 
+.visible {
+    opacity: 1;
+}
 
+/* Scroll to Top Button */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}
+
+#contacts {
+    font-family: 'Galleria', sans-serif;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.dropdown a:hover {
+    background-color: #444;
+}
+
+#contactInfo {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1000;
+}
+
+#contactInfo a {
+    color: #333;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.dropdown a:hover {
+    background-color: #444;
+}
+
+/* Media Query for responsive dropdown on mobile */
+@media screen and (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .dropdown-btn {
+        display: block;
+    }
+}
+
+#contactBtn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #000000;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9999; /* Ensure it stays above other elements */
+}
+
+#contactBtn:hover {
+  background-color: #000000;
+}

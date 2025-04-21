@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type=""text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Photo Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,117 +11,228 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
+
+    <div class="nav-bar">
+        <div class="menu-icon" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#" id="contactLink">Contacts</a>
+        </div>
+    </div>
+
     <div class="container">
         <div class="heading">
             <h3>Prince <span>Galleria</span></h3>
+            <div class="hover-text">Every Picture has different Memories</div> <!-- Add this line -->
         </div>
-        <div class="box">
-            
-            <div class="dream">
-                <img src="1.jpg">
-                <img src="2.jpg">
-                <img src="3.jpg">
-                <img src="4.jpg">
-                <img src="6.jpg">
-                <img src="B1.jpg">
-                <img src="B2.jpg">
-                <img src="B3.jpg">
-                <img src="B4.jpg">
-                <img src="B5.jpg">
-                <img src="B6.jpg">
-                <img src="B7.jpg">
-                <img src="B8.jpg">
-                <img src="B9.jpg">
-                <img src="B10.jpg">
-                <img src="B11.jpg">
-                <img src="B12.jpg">
-                <img src="B13.jpg">
-                <img src="B14.jpg">
-                <img src="C1.jpg">
-                <img src="C2.jpg">
-                <img src="C3.jpg">
-                <img src="5.jpg">
-
-            </div>
-
-
-
-            <div class = "dream">
-
-
-                <img src="C4.jpg">
-                <img src="C5.jpg">
-                <img src="C6.jpg">
-                <img src="C7.jpg">
-                <img src="C8.jpg">
-                <img src="C9.jpg">
-                <img src="J1.jpg">
-                <img src="J2.jpg">
-                <img src="J3.jpg">
-                <img src="J4.jpg">
-                <img src="J5.jpg">
-                <img src="J6.jpg">
-                <img src="J7.jpg">
-                <img src="P1.jpg">
-                <img src="P2.jpg">
-                <img src="P3.jpg">
-                <img src="P4.jpg">
-                <img src="P5.jpg">
-
-
-            </div>
-            
-
-            <div class = "dream">
-                <img src="P8.jpg">
-                <img src="P9.jpg">
-                <img src="P10.jpg">
-                <img src="P11.jpg">
-                <img src="P12.jpg">
-                <img src="P13.jpg">
-                <img src="P14.jpg">
-                <img src="P15.jpg">
-                <img src="P16.jpg">
-                <img src="P17.jpg">
-                <img src="P18.jpg">
-                <img src="P19.jpg">
-                <img src="P20.jpg">
-                <img src="P21.jpg">
-                <img src="P22.jpg">
-                <img src="us1.jpg">
-                <img src="us2.jpg">
-                <img src="us3.jpg">
-                <img src="us4.jpg">
-                <img src="us5.jpg">
-                <img src="us6.jpg">
-                <img src="us7.jpg">
-                <img src="P7.jpg">
-                <img src="P6.jpg">
-            </div>
-                
-
-
         
+        <div class="box">
+            <div class="dream">
+                <img class="fade" src="1.jpg">
+                <img class="fade" src="2.jpg">
+                <img class="fade" src="3.jpg">
+                <img class="fade" src="4.jpg">
+                <img class="fade" src="6.jpg">
+                <img class="fade" src="B1.jpg">
+                <img class="fade" src="B2.jpg">
+                <img class="fade" src="B3.jpg">
+                <img class="fade" src="B4.jpg">
+                <img class="fade" src="B5.jpg">
+                <img class="fade" src="B6.jpg">
+                <img class="fade" src="B7.jpg">
+                <img class="fade" src="B8.jpg">
+                <img class="fade" src="B9.jpg">
+                <img class="fade" src="B10.jpg">
+                <img class="fade" src="B11.jpg">
+                <img class="fade" src="B12.jpg">
+                <img class="fade" src="B13.jpg">
+                <img class="fade" src="B14.jpg">
+                <img class="fade" src="C1.jpg">
+                <img class="fade" src="C2.jpg">
+                <img class="fade" src="C3.jpg">
+                <img class="fade" src="5.jpg">
+            </div>
 
+            <div class="dream">
+                <img class="fade" src="C4.jpg">
+                <img class="fade" src="C5.jpg">
+                <img class="fade" src="C6.jpg">
+                <img class="fade" src="C7.jpg">
+                <img class="fade" src="C8.jpg">
+                <img class="fade" src="C9.jpg">
+                <img class="fade" src="J1.jpg">
+                <img class="fade" src="J2.jpg">
+                <img class="fade" src="J3.jpg">
+                <img class="fade" src="J4.jpg">
+                <img class="fade" src="J5.jpg">
+                <img class="fade" src="J6.jpg">
+                <img class="fade" src="J7.jpg">
+                <img class="fade" src="P1.jpg">
+                <img class="fade" src="P2.jpg">
+                <img class="fade" src="P3.jpg">
+                <img class="fade" src="P4.jpg">
+                <img class="fade" src="P5.jpg">
+            </div>
 
+            <div class="dream">
+                <img class="fade" src="P8.jpg">
+                <img class="fade" src="P9.jpg">
+                <img class="fade" src="P10.jpg">
+                <img class="fade" src="P11.jpg">
+                <img class="fade" src="P12.jpg">
+                <img class="fade" src="P13.jpg">
+                <img class="fade" src="P14.jpg">
+                <img class="fade" src="P15.jpg">
+                <img class="fade" src="P16.jpg">
+                <img class="fade" src="P17.jpg">
+                <img class="fade" src="P18.jpg">
+                <img class="fade" src="P19.jpg">
+                <img class="fade" src="P20.jpg">
+                <img class="fade" src="P21.jpg">
+                <img class="fade" src="P22.jpg">
+                <img class="fade" src="us1.jpg">
+                <img class="fade" src="us2.jpg">
+                <img class="fade" src="us3.jpg">
+                <img class="fade" src="us4.jpg">
+                <img class="fade" src="us5.jpg">
+                <img class="fade" src="us6.jpg">
+                <img class="fade" src="us7.jpg">
+                <img class="fade" src="P7.jpg">
+                <img class="fade" src="P6.jpg">
+            </div>
         </div>
 
         <div class="btn">
             <a href="#">More</a>
         </div>
-
-
-
-
     </div>
-    
+
+    <button id="topBtn">↑</button>
+
+    <script>
+        const topBtn = document.getElementById("topBtn");
+      
+        window.onscroll = function() {
+          if (window.pageYOffset > 300) {
+            topBtn.style.display = "block";
+          } else {
+            topBtn.style.display = "none";
+          }
+        };
+      
+        topBtn.onclick = function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".close");
+        const images = document.querySelectorAll(".dream img");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        const dreams = document.querySelectorAll('.dream');
+        const moreBtn = document.querySelector('.btn');
+
+        dreams.forEach(dream => {
+            const images = dream.querySelectorAll('img');
+            const half = Math.ceil(images.length / 2);
+            
+            images.forEach((img, index) => {
+                if (index >= half) {
+                    img.classList.add('hidden');
+                }
+            });
+        });
+
+        moreBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const allHidden = document.querySelectorAll('.dream img.hidden');
+            allHidden.forEach(img => {
+                img.classList.remove('hidden');
+            });
+            moreBtn.style.display = 'none';
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.fade');
+
+            function checkVisibility() {
+                const windowHeight = window.innerHeight;
+                const scrollY = window.scrollY;
+
+                images.forEach(image => {
+                    const imageTop = image.getBoundingClientRect().top + scrollY;
+                    if (imageTop < windowHeight + scrollY) {
+                        image.classList.add('visible');
+                    }
+                });
+            }
+
+            checkVisibility();
+            window.addEventListener('scroll', checkVisibility);
+        });
+    </script>
+
+    <script>
+        const menuIcon = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const contactLink = document.getElementById('contactLink');
+
+        let isMenuOpen = false;
+
+        menuIcon.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            menuIcon.style.transform = isMenuOpen ? 'rotate(360deg)' : 'rotate(-360deg)';
+            dropdownMenu.style.display = isMenuOpen ? 'block' : 'none';
+        });
+
+        contactLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            dropdownMenu.style.display = 'none';
+            menuIcon.style.transform = 'rotate(0deg)';
+            isMenuOpen = false;
+        });
+    </script>
+    <!-- Contact Information Section -->
+<div id="contactInfo" class="contact-info">
+  <p>Email: poncedanielle69@gmail.com</p>
+  <p>Phone: +974 5536 6332</p>
+  <p>Instagram: @princepe.ponce</p>
+</div>
+
+
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> cdc1a9491109384efe647022fd1b44dc91866264
