@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Prince Galleria</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #000000;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .about-content {
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .about-profile {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 300px;
+      margin: 30px auto;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .carousel-image {
+      min-width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 0 10px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    #prev {
+      left: 0;
+    }
+
+    #next {
+      right: 0;
+    }
+
+    .back-button {
+      margin-top: 40px;
+      background-color: white;
+      color: #010b14;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="about-section">
+    <div class="about-content">
+      <img src="IMG_2211-min.jpg"My Profile Picture" class="about-profile">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm <strong>Danielle Prince Ponce</strong>. I started photography because I wanted to capture moments and relive them through a screen.
+        If you look closely at my gallery, you'll notice that I use different color gradings — the ones at the top reflect my earlier editing style,
+        while the colors gradually shift as you scroll down.
+      </p>I began my photography journey when I was 15 years old, and I’ll be turning 17 this November. Please excuse any glitches/errors on this site — it’s still under construction!
+
+
+
+      <h2>Who Inspired me and Why photograph?</h2>
+      <p>
+        Honestly, I was just a kid with no hobbies (aside from raging in Fortnite and Roblox). I dreamed of becoming a photographer because I realized how beautiful the pictures that were taken on the internet was and that each photo had a memory.
+
+      </p>
+      <p>
+        When I took a trip to Canada, I realized my cousins also loved photography, so I followed by starting with my phone. Then when I came back to Qatar, I remembered that my mom had a camera she valued. So I looked into her closet looking for it (which of course I did), and started charging the camera.
+        Then, day and night, I started testing the camera and realized that I was having fun. So I woke up early morning every day just to capture the morning life before the scorching heat (starts around 7 am). I photographed people, birds, trees, parks, and mostly just anything i saw. <strong>I inspired myself</strong> to keep going even tho the pictures were "unpleasant" to look at.
+      </p>
+
+      <p>
+        I told myself that I couldn't enetertain the whole world even if I wanted to. So, I just thought, why not let people see the things I see from my eyes? My perspective? So everywhere I went, I brought my camera with me like it was a second phone. So the posts your are seeing in my Insta, those were from my perspective and my colors.
+        Plus, not eveyone has a chance to see what I see, that's why every photo is so <strong>Unique</strong> to me, wether it's my work or another's. 
+      </p>
+
+
+
+    <h2>Future Goals with this Hobby</h2>
+    <p>
+      I think evry photographers dream, is having their photo's on a wall. Wether it be on a famous museum (or even better, a whole photo gallery of them), a restaurant, or random family's house. Either way, I would love if my work could be <strong>seen and appreciated</strong> in the future. 
+      I would also count being able to sell the photos as print. But do I plan to sell the photos? Of course, I'm not just going to have almost a car worth of gear if I don't have anything in return.
+    </p>
+
+    <p>
+      Another goal/achievement would be being able to be a little freelancer for this hobby. Wether it be in sports, weddings, maybe even funerals (condolences in advance). It'll mean the whole world to me if someone really loved my photography its to the point that they would hire me.
+    </p>
+
+      <div class="carousel">
+        <button class="carousel-btn" id="prev">&#10094;</button>
+        <div class="carousel-track" id="carouselTrack">
+          <img src="profile2.webp" class="carousel-image" alt="Profile 2">
+          <img src="profile3.webp" class="carousel-image" alt="Profile 3">
+          <img src="profile4.webp" class="carousel-image" alt="Profile 4">
+          <img src="profile5.webp" class="carousel-image" alt="Profile 5">
+        </div>
+        <button class="carousel-btn" id="next">&#10095;</button>
+      </div>
+
+      <a href="index.html">
+        <button class="back-button">← Back to Gallery</button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const track = document.getElementById("carouselTrack");
+    const images = document.querySelectorAll(".carousel-image");
+    const totalImages = images.length;
+
+    document.getElementById("next").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateCarousel();
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      updateCarousel();
+    });
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
+</body>
+</html>

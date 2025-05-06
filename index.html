@@ -7,10 +7,28 @@
     <title>Photo Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+    <!-- Preload top 3 images in each column for faster initial display -->
+    <link rel="preload" as="image" href="1.webp">
+    <link rel="preload" as="image" href="2.webp">
+    <link rel="preload" as="image" href="3.webp">
+
+    <link rel="preload" as="image" href="B1.webp">
+    <link rel="preload" as="image" href="B2.webp">
+    <link rel="preload" as="image" href="B3.webp">
+
+    <link rel="preload" as="image" href="C4.webp">
+    <link rel="preload" as="image" href="C5.webp">
+    <link rel="preload" as="image" href="C6.webp">
+    <a href="about.html" class="about-btn">About Me</a>
+
+
+
 </head>
 <body>
 
@@ -30,80 +48,122 @@
             <h3>Prince <span>Galleria</span></h3>
             <div class="hover-text">Every Picture has different Memories</div> <!-- Add this line -->
         </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="nature">Nature</button>
+            <button class="filter-btn" data-category="portrait">Portrait</button>
+            <button class="filter-btn" data-category="urban">Urban</button>
+            <button class="filter-btn" data-category="creative">Creative</button>
+            <!-- Add more buttons if needed -->
+          </div>
+          
         
         <div class="box">
             <div class="dream">
-                <img class="fade" src="1.jpg">
-                <img class="fade" src="2.jpg">
-                <img class="fade" src="3.jpg">
-                <img class="fade" src="4.jpg">
-                <img class="fade" src="6.jpg">
-                <img class="fade" src="B1.jpg">
-                <img class="fade" src="B2.jpg">
-                <img class="fade" src="B3.jpg">
-                <img class="fade" src="B4.jpg">
-                <img class="fade" src="B5.jpg">
-                <img class="fade" src="B6.jpg">
-                <img class="fade" src="B7.jpg">
-                <img class="fade" src="B8.jpg">
-                <img class="fade" src="B9.jpg">
-                <img class="fade" src="B10.jpg">
-                <img class="fade" src="B11.jpg">
-                <img class="fade" src="B12.jpg">
-                <img class="fade" src="B13.jpg">
-                <img class="fade" src="B14.jpg">
-                <img class="fade" src="C1.jpg">
-                <img class="fade" src="C2.jpg">
-                <img class="fade" src="C3.jpg">
-                <img class="fade" src="5.jpg">
+                <img class="fade" src="1.webp" loading="lazy" data-category="urban">
+                <img class="fade" src="2.webp" loading="lazy"data-category="urban">
+                <img class="fade" src="3.webp" loading="lazy"data-category="urban">
+                <img class="fade" src="4.webp" loading="lazy"data-category="urban">
+                <img class="fade" src="6.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="B1-min.jpg" loading="lazy"data-category="urban">
+                <img class="fade" src="B2-min.jpg" loading="lazy"data-category="urban">
+                <img class="fade" src="B3-min.jpg" loading="lazy"data-category="urban">
+                <img class="fade" src="B4-min.jpg" loading="lazy"data-category="urban">
+                <img class="fade" src="B5-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="B6-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="B7-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="B8-min.jpg" loading="lazy"data-category="nature">
+                <img class="fade" src="B9.webp" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="B10.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="B11.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="B12-min.jpg" loading="lazy"data-category="nature portrait creative">
+                <img class="fade" src="B13.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="B14.webp" loading="lazy"data-category="urban">
+                <img class="fade" src="C1-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="C2.webp" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="C3-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="5.webp" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P24-min.jpg" loading="lazy" data-category="urban portrait creative">
+                <img class="fade" src="P26-min.jpg" loading="lazy" data-category="nature urban portrait">
+                <img class="fade" src="P40-min.jpg" loading="lazy"data-category="nature urban creative portrait">
+                <img class="fade" src="P43-min.jpg" loading="lazy"data-category="urban ">
+                <img class="fade" src="P46-min.jpg" loading="lazy"data-category="nature urban portrait">
+                <img class="fade" src="P49-min.jpg" loading="lazy"data-category="urban nature portrait">
+                <img class="fade" src="P52-min.jpg" loading="lazy"data-category="portrait nature">
+                <img class="fade" src="Q3-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="Q7-min.jpg" loading="lazy"data-category="urban">
             </div>
 
             <div class="dream">
-                <img class="fade" src="C4.jpg">
-                <img class="fade" src="C5.jpg">
-                <img class="fade" src="C6.jpg">
-                <img class="fade" src="C7.jpg">
-                <img class="fade" src="C8.jpg">
-                <img class="fade" src="C9.jpg">
-                <img class="fade" src="J1.jpg">
-                <img class="fade" src="J2.jpg">
-                <img class="fade" src="J3.jpg">
-                <img class="fade" src="J4.jpg">
-                <img class="fade" src="J5.jpg">
-                <img class="fade" src="J6.jpg">
-                <img class="fade" src="J7.jpg">
-                <img class="fade" src="P1.jpg">
-                <img class="fade" src="P2.jpg">
-                <img class="fade" src="P3.jpg">
-                <img class="fade" src="P4.jpg">
-                <img class="fade" src="P5.jpg">
+                <img class="fade" src="C4.webp" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="C5.webp" loading="lazy"data-category="nature urban">
+                <img class="fade" src="C6.webp" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="C7-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="C8.webp" loading="lazy"data-category="nature portrait ">
+                <img class="fade" src="C9.webp" loading="lazy"data-category="urban nature portrait">
+                <img class="fade" src="J1-min.jpg" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="J2.webp" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="J3.webp" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="J4.webp" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="J5.webp" loading="lazy"data-category="urban">
+                <img class="fade" src="J6.webp" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="J7.webp" loading="lazy"data-category="urban ">
+                <img class="fade" src="P1.webp" loading="lazy"data-category="nature urban portrait creative">
+                <img class="fade" src="P2.webp" loading="lazy"data-category="urban portrait creative">
+                <img class="fade" src="P3.webp" loading="lazy"data-category="urban portrait creative">
+                <img class="fade" src="P4.webp" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="P5.webp" loading="lazy"data-category="urban">
+                <img class="fade" src="P23-min.jpg" loading="lazy"data-category="urban nature portrait">
+                <img class="fade" src="P27-min.jpg" loading="lazy"data-category="nature urban portrait creative">
+                <img class="fade" src="P28-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P29-min.jpg" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="P41-min.jpg" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="P44-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P50-min.jpg" loading="lazy"data-category="nature">
+                <img class="fade" src="P53-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="Q5-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="Q9-min.jpg" loading="lazy"data-category="nature portrait">
+                
+
+
             </div>
 
             <div class="dream">
-                <img class="fade" src="P8.jpg">
-                <img class="fade" src="P9.jpg">
-                <img class="fade" src="P10.jpg">
-                <img class="fade" src="P11.jpg">
-                <img class="fade" src="P12.jpg">
-                <img class="fade" src="P13.jpg">
-                <img class="fade" src="P14.jpg">
-                <img class="fade" src="P15.jpg">
-                <img class="fade" src="P16.jpg">
-                <img class="fade" src="P17.jpg">
-                <img class="fade" src="P18.jpg">
-                <img class="fade" src="P19.jpg">
-                <img class="fade" src="P20.jpg">
-                <img class="fade" src="P21.jpg">
-                <img class="fade" src="P22.jpg">
-                <img class="fade" src="us1.jpg">
-                <img class="fade" src="us2.jpg">
-                <img class="fade" src="us3.jpg">
-                <img class="fade" src="us4.jpg">
-                <img class="fade" src="us5.jpg">
-                <img class="fade" src="us6.jpg">
-                <img class="fade" src="us7.jpg">
-                <img class="fade" src="P7.jpg">
-                <img class="fade" src="P6.jpg">
+                <img class="fade" src="P8.webp" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P9.webp" loading="lazy"data-category="nature portrait ">
+                <img class="fade" src="P10.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="P11.webp" loading="lazy"data-category="nature creative">
+                <img class="fade" src="P12.webp" loading="lazy"data-category="nature creative">
+                <img class="fade" src="P13.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="P14.webp" loading="lazy"data-category="nature creative portrait">
+                <img class="fade" src="P15.webp" loading="lazy"data-category="urban creative">
+                <img class="fade" src="P16.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="P17.webp" loading="lazy"data-category="nature creative portrait">
+                <img class="fade" src="P18.webp" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="P19.webp" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P20.webp" loading="lazy"data-category="nature ">
+                <img class="fade" src="P21.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="P22.webp" loading="lazy"data-category="nature">
+                <img class="fade" src="us1.webp" loading="lazy"data-category="nature urban portrait creative">
+                <img class="fade" src="us2.webp" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="us3.webp" loading="lazy"data-category="urban creative">
+                <img class="fade" src="us4.webp" loading="lazy"data-category="urban creative">
+                <img class="fade" src="us5.webp" loading="lazy"data-category="urban nature">
+                <img class="fade" src="us6.webp" loading="lazy"data-category="urban nature">
+                <img class="fade" src="us7.webp" loading="lazy"data-category="urban nature">
+                <img class="fade" src="P7.webp" loading="lazy"data-category="nature urban portrait">
+                <img class="fade" src="P6.webp" loading="lazy"data-category="nature creative portrait">
+                <img class="fade" src="P25-min.jpg" loading="lazy"data-category="nature urban creative">
+                <img class="fade" src="P30-min.jpg" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="P42-min.jpg" loading="lazy"data-category="urban portrait">
+                <img class="fade" src="P45-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P48-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P51-min.jpg" loading="lazy"data-category="nature">
+                <img class="fade" src="Q2-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="Q6-min.jpg" loading="lazy"data-category="urban creative">
+                <img class="fade" src="Q10-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="p-min.jpg" loading="lazy"data-category="nature portrait">
             </div>
         </div>
 
@@ -113,6 +173,12 @@
     </div>
 
     <button id="topBtn">↑</button>
+    
+    <div class="contact-info" id="contactInfo">
+        <p>Email: <a href="mailto:poncedanielle69@gmail.com">poncedanielle69@gmail.com</a></p>
+        <p>Phone: +974 5536 6332</p>
+        <p>Instagram: princepe</p>
+      </div>
 
     <script>
         const topBtn = document.getElementById("topBtn");
@@ -139,9 +205,9 @@
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
         const closeBtn = document.querySelector(".close");
-        const images = document.querySelectorAll(".dream img");
+        const gimages = document.querySelectorAll(".dream img");
 
-        images.forEach(img => {
+        gimages.forEach(img => {
             img.addEventListener("click", () => {
                 lightbox.style.display = "flex";
                 lightboxImg.src = img.src;
@@ -204,6 +270,7 @@
             window.addEventListener('scroll', checkVisibility);
         });
     </script>
+    
 
     <script>
         const menuIcon = document.getElementById('menuToggle');
@@ -219,19 +286,119 @@
         });
 
         contactLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            dropdownMenu.style.display = 'none';
-            menuIcon.style.transform = 'rotate(0deg)';
-            isMenuOpen = false;
-        });
+    e.preventDefault();
+
+    const contactInfo = document.getElementById('contactInfo');
+
+    // Scroll to contact section smoothly
+    contactInfo.scrollIntoView({ behavior: 'smooth' });
+
+    // Show it with fade-in
+    contactInfo.classList.add('visible');
+
+    // Close the dropdown menu
+    dropdownMenu.style.display = 'none';
+    menuIcon.style.transform = 'rotate(0deg)';
+    isMenuOpen = false;
+});
+
+
+      
+
     </script>
-    <!-- Contact Information Section -->
-<div id="contactInfo" class="contact-info">
-  <p>Email: poncedanielle69@gmail.com</p>
-  <p>Phone: +974 5536 6332</p>
-  <p>Instagram: @princepe.ponce</p>
-</div>
+
+<script>
+    const filterButtons1 = document.querySelectorAll('.filter-btn');
+    const galleryImages = document.querySelectorAll('.dream img');
+  
+    filterButtons1.forEach(button => {
+      button.addEventListener('click', () => {
+        // Toggle active class
+        filterButtons1.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+  
+        const category = button.getAttribute('data-category');
+  
+        galleryImages.forEach(img => {
+          const categories = img.getAttribute('data-category').split(' ');
+  
+          if (category === 'all' || categories.includes(category)) {
+            img.style.display = 'block';
+          } else {
+            img.style.display = 'none';
+          }
+        });
+      });
+    });
+
+
+  </script>
+
+<script>
+    const images = document.querySelectorAll('.gallery img');
+    const columns = document.querySelectorAll('.column');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    let selectedCategories = [];
+  
+    // Toggle filtering categories
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        button.classList.toggle('active');
+  
+        if (button.classList.contains('active')) {
+          selectedCategories.push(category);
+        } else {
+          selectedCategories = selectedCategories.filter(cat => cat !== category);
+        }
+  
+        filterImages();
+      });
+    });
+  
+    function filterImages() {
+      const visibleImages = [];
+  
+      images.forEach(img => {
+        const imgCategories = img.getAttribute('data-category').split(' ');
+        const matches = selectedCategories.every(cat => imgCategories.includes(cat));
+  
+        if (selectedCategories.length === 0 || matches) {
+          img.style.display = '';
+          visibleImages.push(img);
+        } else {
+          img.style.display = 'none';
+        }
+      });
+  
+      rebalanceColumns(visibleImages);
+    }
+  
+    function rebalanceColumns(visibleImages) {
+      // Clear all columns
+      columns.forEach(col => col.innerHTML = '');
+  
+      // If not passed in, get all currently visible images
+      if (!visibleImages) {
+        visibleImages = Array.from(images).filter(img => img.style.display !== 'none');
+      }
+  
+      // Distribute visible images evenly across columns
+      visibleImages.forEach((img, index) => {
+        columns[index % columns.length].appendChild(img);
+      });
+    }
+  
+    // Rebalance images on initial load
+    window.addEventListener('load', () => {
+      rebalanceColumns(Array.from(images));
+    });
+  </script>
+  </body>
+  
+
+  
+  
 
 
 </body>
