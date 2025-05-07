@@ -93,6 +93,10 @@
                 <img class="fade" src="P52-min.jpg" loading="lazy"data-category="portrait nature">
                 <img class="fade" src="Q3-min.jpg" loading="lazy"data-category="nature portrait">
                 <img class="fade" src="Q7-min.jpg" loading="lazy"data-category="urban">
+                <img class="fade" src="P54.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P57.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P61.jpg" loading="lazy"data-category="nature portrait">
+
             </div>
 
             <div class="dream">
@@ -124,6 +128,10 @@
                 <img class="fade" src="P53-min.jpg" loading="lazy"data-category="nature portrait">
                 <img class="fade" src="Q5-min.jpg" loading="lazy"data-category="nature portrait">
                 <img class="fade" src="Q9-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P56.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P60.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P63.jpg" loading="lazy"data-category="urban portrait">
+                
                 
 
 
@@ -164,6 +172,9 @@
                 <img class="fade" src="Q6-min.jpg" loading="lazy"data-category="urban creative">
                 <img class="fade" src="Q10-min.jpg" loading="lazy"data-category="nature portrait">
                 <img class="fade" src="p-min.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P55.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P58.jpg" loading="lazy"data-category="nature portrait">
+                <img class="fade" src="P62.jpg" loading="lazy"data-category="nature portrait creative">
             </div>
         </div>
 
@@ -393,8 +404,30 @@
     window.addEventListener('load', () => {
       rebalanceColumns(Array.from(images));
     });
+
+    document.querySelector('a[href^="#"]').addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector(this.getAttribute("href")).scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
+
+
   </script>
+
+  
   </body>
+  
   
 
   
